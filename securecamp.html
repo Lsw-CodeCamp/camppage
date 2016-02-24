@@ -1,0 +1,147 @@
+<!doctype html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style/material.min.css">
+    <script src="./style/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>SecureCamp</title>
+    <script>
+        function load(el) { el.classList.add('loaded') }
+        function unload(el) { el.classList.add('unloaded') }
+    </script>
+    
+    <style>
+        body {
+            background: #2d2d2d;
+        }
+    
+        .loaded { background: #2d2d2d; }
+        
+        .unloaded { background: #303030; }
+    
+    </style>
+
+</header>
+
+<body>
+    <!-- MENU -->
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+        background: rgba(255, 255, 255, 0);
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+           your background is light. */
+        color: white;
+    }
+    </style>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">SecureCamp</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="#">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+            </div>
+        </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">SecureCamp</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="#">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="content">
+                <div class="description">
+                    <h3>ÜBER</h3>
+                    <ul>
+                        <li>Schutz gegen Schadsoftware, Hacker, neugierige Behörden, Nachbarn, Kollegen, oder Familienmitglieder.</li>
+                        <li>Wahrung der Privatsphäre und Anonymität im Netz.</li>
+                        <li>Absicherung des eigenen Servers, oder Netzwerks.</li>
+                    </ul>
+                    Sicherheit bedeutet, Deine Daten vor dem Zugriff anderer zu sichern und Fremden keine Kontrolle über die eigenen Rechner, oder Netzwerke zu ermöglichen.
+                    <br /><br />
+                    Das SecureCamp zeigt Dir, wie es geht.
+                    <h4>ANSPRECHPARTNER</h4>
+                    <!-- TODO: cards for team leader -->
+                    <div class="teamleader">
+                        <center>
+                        <ul id="menu">
+                            <li>
+                                <div>
+                                    <a href="https://linux-statt-windows.org/user/lilcreep" class="icon"><div class="icon" style="background-image: url(./assets/members/marc.jpg);"></div></a><br />
+                                   Marc
+                               </div>
+                            </li>
+                        </ul></center>
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <p><center><h1>IN KÜRZE VERFÜGBAR<h1/></center></p>
+                </div>
+                <div class="mdl-grid">
+                <!-- define cards here -->
+                <div class="mdl-card mdl-cell mdl-cell--12-col session-secure-header-card">
+                <div class="mdl-card__media mdl-color-text--grey-50 session-secure-header">
+                        <h3><a href="#">VORLAGEN</a></h3>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-cell mdl-cell-->4-col">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session-secure">
+                        <h3><a href="./presentation/benny_vorlage.html">Vorlage 1</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Nicht verfügbar</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-cell mdl-cell-->4-col">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session-secure">
+                        <h3><a href="./presentation/securecamp_vorlage.html">Vorlage 2</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Nicht verfügbar</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+				<div class="mdl-logo">LsW-Camps</div>
+    				<ul class="mdl-mini-footer__link-list">
+      					<li><a href="http://linux-statt-windows.org" class="footer-link">Forum</a></li>
+      					<li><a href="#" class="footer-link">Facebook</a></li>
+    				</ul>
+			</div>
+			<div class="mdl-mini-footer--right-section">
+                <div class="mdl-logo">© 2016 Linux statt Windows</div> 
+            </div>
+        </footer> 
+        </main>
+</body>

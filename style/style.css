@@ -1,0 +1,318 @@
+.card-shadow {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.description {
+    color: rgba(255,255,255,0.87);
+    margin-bottom: 5%;
+    margin-left: 3%;
+}
+
+.teamleader {
+    display: inline-block;    
+    width: 100%;
+}
+
+.icon, .icon:hover {
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background: #fff;
+    padding-left: 0px;
+    float:left;
+    display: inline-block;
+    background-size:cover;
+}
+
+
+ul#menu {
+    float: left;
+    width: 100%;
+    display: inline-block;
+    padding-left: 0px;
+}
+
+ul#menu li {
+    display:inline-block;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.content {
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 64px;
+}
+
+.camp-secure {
+    background: url('../assets/SecureCamp_Button.png') center center no-repeat #4d4d4d;
+    color: #fff;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-secure a, a:visited, a:hover, a:active {
+    color:#555;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.camp-secure-header {
+    color: #FFFFFF;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.camp-secure-header-card {
+    min-height: 30px;
+    height: 70px;
+}
+
+.camp-secure-header a {
+    color:#555;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.session-secure {
+    background-color: #a5a3ae;
+    color: #fff;
+}
+
+.session-secure a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.session-secure-header {
+    /*background: #251e23;*/
+    background: rgba(37, 30, 35, 0); 
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.session-secure-header-card {
+    background: rgba(37, 30, 35, 0); 
+    min-height: 30px;
+    height: 70px;
+}
+
+.session-secure-header a, .session-secure-header a:hover {
+    color:#BDBDBD !important;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.camp-tech {
+    background: url('../assets/TechCamp_Button.png') center center no-repeat #001e0e;
+    color: #fff;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-tech a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.camp-tech-header {
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.camp-tech-header-card {
+    min-height: 30px;
+    height: 70px;
+}
+
+.camp-tech-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.session-tech {
+    background-color: #006837;
+    color: #fff;
+}
+
+.session-tech a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.session-tech-header {
+    /*background: #251e23;*/
+    background: rgba(37, 30, 35, 0); 
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.session-tech-header-card {
+    background: rgba(37, 30, 35, 0); 
+    min-height: 30px;
+    height: 70px;
+}
+
+.session-tech-header a, .session-tech-header a:hover {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.camp-creative {
+    background: url('../assets/CreativeCamp_Button.png') center center no-repeat #3d123f;
+    color: #fff;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-creative a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.camp-creative-header {
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.camp-creative-header-card {
+    min-height: 30px;
+    height: 70px;
+}
+
+.camp-creative-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.session-creative {
+    background-color: #872484;
+    color: #fff;
+}
+
+.session-creative a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.session-creative-header {
+    /*background: #251e23;*/
+    background: rgba(37, 30, 35, 0); 
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.session-creative-header-card {
+    background: rgba(37, 30, 35, 0); 
+    min-height: 30px;
+    height: 70px;
+}
+
+.session-creative-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.camp-code {
+    background: url('../assets/CodeCamp_Button.png') center center no-repeat #30272d;
+    color: #fff;
+    z-index: 10;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-code a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.camp-code-header {
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.camp-code-header-card {
+    min-height: 30px;
+    height: 70px;
+}
+
+.camp-code-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.camp-body {
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+}
+
+.session {
+    background-color: #97272d;
+    color: #fff;
+}
+
+.session a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
+}
+
+.session-header {
+    /*background: #251e23;*/
+    background: rgba(37, 30, 35, 0); 
+    color: #555555;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.session-header-card {
+    background: rgba(37, 30, 35, 0); 
+    min-height: 30px;
+    height: 70px;
+}
+
+.session-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.footer-link, .footer-link:hover {
+    padding: 0px;
+	color: #BDBDBD !important;
+    text-decoration: none;
+}
+
+.mdl-mini-footer {
+    background: rgba(255,255,255, 0);
+}
+
+.footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:rgba(255,255,255, 0);
+}
+
+body {
+    font-family: "Roboto", "Helvetica",serif;
+}

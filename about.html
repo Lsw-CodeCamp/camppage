@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="./style/material.css">
+    <script src="./style/material.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>Über</title>
+
+    <script>
+        function fadeout() {
+            var element = document.body
+            var op = 1;
+            var timer = setInterval(function() {
+                if (op <= 0.1) {
+                    clearInterval(timer);
+                    element.style.display = 'none'
+                }
+                element.style.opacity = op;
+                element.style.filter = "alpha(opacity=" + op * 100 + ")";
+                op -= op * 0.1;
+            }, 10);
+        }
+
+        function fadein() {
+            var element = document.body
+            var op = 0.01;
+            var timer = setInterval(function() {
+                if (op >= 0.9) {
+                    clearInterval(timer);
+                }
+                console.log(op);
+                element.style.opacity = op;
+                element.style.filter = "alpha(opacity=" + op * 100 + ")";
+                op += op * 0.1;
+            }, 10);
+        }
+
+        function load(el) { el.classList.add('loaded') }
+    </script>
+
+    <style>
+    body {
+      background: #FAFAFA;
+       /* background: #303030;*/
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .loaded { background: #FAFAFA; }
+
+    .landing-card-next {
+      min-height: 120px;
+      position: absolute;
+      top: 33%;
+    }
+
+    .landing-card-next > .mdl-card__title {
+      color: #fff;
+      min-height: 130px;
+      background: url('./logo.png') center 25px no-repeat #30272d;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .landing-card-next .landing-card-date {
+      width: 100%;
+      height: 100%;
+
+      line-height: 65px;
+      font-size: 1.6em;
+      text-align: center;
+    }
+
+    .content {
+        padding-top: 5%;
+    }
+
+    .nav {
+        color: #555 !important;
+    }
+
+    .mdl-layout__drawer-button {
+        color: #555;
+    }
+    
+    .meta {
+        background: #fff;
+    }
+
+    a, a:hover , a:focus{
+        padding: 0px;
+        color: #555 !important;
+        text-decoration: none;
+    }
+
+    </style>
+</head>
+<body onload="load(document.body)">
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title nav">Über</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link nav" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link nav" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link nav" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link nav" href="#">Über</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Über</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                <a class="mdl-navigation__link" href="./securecamp.html">SecureCamp</a>
+                <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                <a class="mdl-navigation__link" href="#">Über</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="content">
+                <center>
+                    <p>Ein Projekt von</p>
+                    <p>
+                        <a href="http://linux-statt-windows.org">
+                            <img src="./assets/LsW-Logo.png" alt="LsW-Logo">
+                        </a>
+                    </p>
+                    <p>Diese Seite wurde mit Hilfe von <a href="http://www.getmdl.io/">Material Design Lite</a> erstellt.
+                </center>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

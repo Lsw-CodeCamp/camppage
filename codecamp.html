@@ -1,0 +1,160 @@
+<!doctype html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style/material.min.css">
+    <script src="./style/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>CodeCamp</title>
+    <script>
+        function load(el) { el.classList.add('loaded') }
+        function unload(el) { el.classList.add('unloaded') }
+    </script>
+    
+    <style>
+        body {
+            background: #251e23;
+        }
+    
+        .loaded { background: #251e23; }
+        
+        .unloaded { background: #303030; }
+   
+    </style>
+
+</header>
+
+<body>
+    <!-- MENU -->
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+        background: rgba(255, 255, 255, 0);
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+           your background is light. */
+        color: white;
+    }
+    </style>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">CodeCamp</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="#">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+            </div>
+        </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">CodeCamp</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="#">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="content">
+                <div class="description">
+                    <h3>ÜBER</h3>
+                    Im CodeCamp findest du die Möglichkeit dich mit verschiedenen Programmiersprachen und Entwicklungstools auseinanderzusetzen. Wir bieten dir dazu Informationsmaterial, so wie e-learning-Sessions in virtuellen Klassenräumen an. Wenn du Interesse hast, schaue doch bitte nach, ob das Thema deiner Wahl schon geplant wurde oder reiche einfach einen Vorschlag an uns ein.
+                    <h4>ANSPRECHPARTNER</h4>
+                    <!-- TODO: cards for team leader -->
+                    <div class="teamleader">
+                        <center>
+                        <ul id="menu">
+                           <li>
+                               <div>
+                                   <a href="https://linux-statt-windows.org/user/dj-95" class="icon"><div class="icon" style="background-image: url(./assets/members/daniel.jpg);"></div></a><br />
+                                   Daniel
+                               </div>
+                           </li>
+                           <li>
+                               <div>
+                                   <a href="https://linux-statt-windows.org/user/miro" class="icon"><div class="icon" style="background-image: url(./assets/members/michael.jpg);"></div></a><br />
+                                   Michael
+                               </div>
+                           </li>
+                           <li>
+                               <div>
+                                   <a href="https://linux-statt-windows.org/user/niklas" class="icon"><div class="icon" style="background-image: url(./assets/members/niklas.jpg);"></div></a><br />
+                                   Niklas
+                               </div>
+                           </li>
+                           <li>
+                               <div>
+                                   <a href="https://linux-statt-windows.org/user/sammy8806" class="icon"><div class="icon" style="background-image: url(./assets/members/steven.jpg);"></div></a><br />
+                                   Steven
+                               </div>
+                           </li> 
+                        </ul></center>
+                    </div>
+                </div>
+                <div class="mdl-grid">
+                <!-- define cards here -->
+                <div class="mdl-card mdl-cell mdl-cell--12-col session-header-card">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session-header">
+                        <h3><a href="#">VORLAGEN</a></h3>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session">
+                        <h3><a href="presentation/benny_vorlage.html">Vorlage 1</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Vorlage 1</strong>
+                            <span>Ab 03.03.2016 verfügbar</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mdl-card mdl-cell mdl-cell--4-col">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session">
+                        <h3><a href="presentation/codecamp_vorlage.html">Vorlage 2</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Vorlage 2</strong>
+                            <span>Ab 03.03.2016 verfügbar</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+				<div class="mdl-logo">LsW-Camps</div>
+    				<ul class="mdl-mini-footer__link-list">
+      					<li><a href="http://linux-statt-windows.org" class="footer-link">Forum</a></li>
+      					<li><a href="#" class="footer-link">Facebook</a></li>
+    				</ul>
+			</div>
+			<div class="mdl-mini-footer--right-section">
+                <div class="mdl-logo">© 2016 Linux statt Windows</div> 
+            </div>
+        </footer> 
+            
+        </main>
+</body>

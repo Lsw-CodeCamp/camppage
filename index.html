@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="./style/material.css">
+    <script src="./style/material.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>LsW Camps</title>
+
+    <script>
+        function fadeout() {
+            var element = document.body
+            var op = 1;
+            var timer = setInterval(function() {
+                if (op <= 0.1) {
+                    clearInterval(timer);
+                    element.style.display = 'none'
+                }
+                element.style.opacity = op;
+                element.style.filter = "alpha(opacity=" + op * 100 + ")";
+                op -= op * 0.1;
+            }, 10);
+        }
+
+        function fadein() {
+            var element = document.body
+            var op = 0.01;
+            var timer = setInterval(function() {
+                if (op >= 0.9) {
+                    clearInterval(timer);
+                }
+                console.log(op);
+                element.style.opacity = op;
+                element.style.filter = "alpha(opacity=" + op * 100 + ")";
+                op += op * 0.1;
+            }, 10);
+        }
+
+        function load(el) { el.classList.add('loaded') }
+    </script>
+
+    <style>
+    .card-menu-entry, .card-menu-entry:focus {
+        color: rgba(0,0,0,0.87) !important;
+        text-decoration: none;
+    }
+
+    body {
+      background: #FAFAFA;
+       /* background: #303030;*/
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .loaded { background: #FAFAFA; }
+
+    .landing-card-next {
+      min-height: 120px;
+      position: absolute;
+      top: 33%;
+    }
+
+    .landing-card-next > .mdl-card__title {
+      color: #fff;
+      min-height: 130px;
+      background: url('./logo.png') center 25px no-repeat #30272d;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .landing-card-next .landing-card-date {
+      width: 100%;
+      height: 100%;
+
+      line-height: 65px;
+      font-size: 1.6em;
+      text-align: center;
+    }
+
+    .content {
+        padding-top: 5%;
+    }
+
+    .nav {
+        color: #555 !important;
+    }
+
+    .mdl-layout__drawer-button {
+        color: #555;
+    }
+    
+    .meta {
+        background: #fff;
+    }
+
+    a, a:hover , a:focus{
+        padding: 0px;
+    }
+
+    .mdl-logo {
+        color: #555 !important;
+        font-weight: bold;
+    }
+
+    .footer-link {
+        color: #555 !important;
+    }
+
+    .help-icon {
+        position: relative;
+        color: #fff;
+        z-index: 30;
+        float: right;
+        padding: 5px;
+    }
+    
+    .icon-font {
+        font-size: 17px !important;
+    }
+
+    </style>
+</head>
+<body onload="load(document.body)">
+    <div class="mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title nav">LsW Camps</span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link nav" href="#">Übersicht</a>
+                    <a class="mdl-navigation__link nav" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link nav" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link nav" href="./about.html">Über</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">LsW Camps</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="#">Übersicht</a>
+                <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                <a class="mdl-navigation__link" href="./securecamp.html">SecureCamp</a>
+                <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                <a class="mdl-navigation__link" href="./about.html">Über</a>
+            </nav>
+        </div>
+
+        <main class="mdl-layout__content">
+            <div class="content">
+                <div class="mdl-grid">
+                    <div class="mdl-card mdl-cell mdl-cell--6-col card-shadow">
+                        <div>
+                            <div class="help-icon">
+								<button id="demo-menu-lower-right" class="mdl-button mdl-js-button mdl-button--icon">
+								    <i class="material-icons">more_vert</i>
+								</button>
+
+								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right">
+								    <li disabled class="mdl-menu__item">Termine</li>
+                                    <li class="mdl-menu__item"><a href="./codecamp.html" class="card-menu-entry">Unterlagen</a></li>
+                                    <li class="mdl-menu__item"><a href="./codecamp.html" class="card-menu-entry">Über</a></li>
+								</ul>								
+                            </div>
+                            <a href="./codecamp.html" class="card-link">
+                                <div class="mdl-card__media mdl-color-text--grey-50 camp-code"></div>
+                            </a>
+                        </div>
+                        <div class="mdl-card__supporting-text meta">
+                            <div class="minilogo"></div>
+                            <div class="camp-body">
+                                <!--<strong>Start</strong>
+                                <span>03.03.2016</span><br />-->
+                                <strong>Nächster Termin</strong>
+                                <span>03.03.2016</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card mdl-cell mdl-cell--6-col card-shadow">
+                        <div>
+                            <div class="help-icon">
+								<button id="demo-menu-lower-right-creative" class="mdl-button mdl-js-button mdl-button--icon">
+								    <i class="material-icons">more_vert</i>
+								</button>
+
+								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right-creative">
+								    <li disabled class="mdl-menu__item">Termine</li>
+                                    <li class="mdl-menu__item"><a href="./creativecamp.html" class="card-menu-entry">Unterlagen</a></li>
+                                    <li class="mdl-menu__item"><a href="./creativecamp.html" class="card-menu-entry">Über</a></li>
+								</ul>								
+                            </div>
+                            <a href="./creativecamp.html" class="card-link">
+                                <div class="mdl-card__media mdl-color-text--grey-50 camp-creative"></div>
+                            </a>
+                        </div>
+                        <div class="mdl-card__supporting-text meta">
+                            <div class="minilogo"></div>
+                            <div class="camp-body">
+                                <!--<strong>Start</strong>
+                                <span>In Planung</span><br />-->
+                                <strong>Nächster Termin</strong>
+                                <span>Nicht verfügbar</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card mdl-cell mdl-cell--6-col card-shadow">
+                        <div>
+                            <div class="help-icon">
+								<button id="demo-menu-lower-right-secure" class="mdl-button mdl-js-button mdl-button--icon">
+								    <i class="material-icons">more_vert</i>
+								</button>
+
+								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right-secure">
+								    <li disabled class="mdl-menu__item">Termine</li>
+                                    <li class="mdl-menu__item"><a href="./securecamp.html" class="card-menu-entry">Unterlagen</a></li>
+                                    <li class="mdl-menu__item"><a href="./securecamp.html" class="card-menu-entry">Über</a></li>
+								</ul>								
+                            </div>
+                            <a href="./securecamp.html" class="card-link">
+                                <div class="mdl-card__media mdl-color-text--grey-50 camp-secure"></div>
+                            </a>
+                        </div>
+                        <div class="mdl-card__supporting-text meta">
+                            <div class="minilogo"></div>
+                            <div class="camp-body">
+                                <strong>Nächster Termin</strong>
+                                <span>25.05.2015</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-card mdl-cell mdl-cell--6-col card-shadow">
+                        <div>
+                            <div class="help-icon">
+								<button id="demo-menu-lower-right-tech" class="mdl-button mdl-js-button mdl-button--icon">
+								    <i class="material-icons">more_vert</i>
+								</button>
+
+								<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="demo-menu-lower-right-tech">
+								    <li disabled class="mdl-menu__item">Termine</li>
+                                    <li class="mdl-menu__item"><a href="./techcamp.html" class="card-menu-entry">Unterlagen</a></li>
+                                    <li class="mdl-menu__item"><a href="./techcamp.html" class="card-menu-entry">Über</a></li>
+								</ul>								
+                            </div>
+                            <a href="./techcamp.html" class="card-link">
+                                <div class="mdl-card__media mdl-color-text--grey-50 camp-tech"></div>
+                            </a>
+                        </div>
+                        <div class="mdl-card__supporting-text meta">
+                            <div class="minilogo"></div>
+                            <div class="camp-body">
+                                <strong>Nächster Termin</strong>
+                                <span>25.05.2015</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

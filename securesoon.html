@@ -1,0 +1,91 @@
+<!doctype html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style/material.min.css">
+    <script src="./style/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>SecureCamp</title>
+    <script>
+        function load(el) { el.classList.add('loaded') }
+        function unload(el) { el.classList.add('unloaded') }
+    </script>
+    
+    <style>
+        body {
+            background: #FAFAFA;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+   
+        .content {
+            color: rgba(255,255,255,0.87);
+            margin-top: 15%;
+        }
+
+        .loaded { background: #2d2d2d; }
+        
+        .unloaded { background: #303030; }
+    
+    </style>
+
+</header>
+
+<body onload="load(document.body)">
+    <!-- MENU -->
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+        background: rgba(255, 255, 255, 0);
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+           your background is light. */
+        color: white;
+    }
+    </style>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">SecureCamp</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="#">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+            </div>
+        </header>
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">SecureCamp</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link" href="#">SecureCamp</a>
+                    <a class="mdl-navigation__link" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link" href="./about.html">Über</a>
+                </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="content">
+                <center><h1>In Kürze verfügbar!</h1>
+                    <p>Der Inhalt auf den du zugreifen möchtest existiert nocht nicht. </p><p>Bitte vergewissere dich, ob das Camp mit diesem Material schon stattgefunden hat oder erst noch statt findet.<br>
+                    Falls das Camp schon statt fand und das Material dennoch nicht verfügbar ist, wende dich bitte an den Leiter des jeweiligen Camps.</p>
+
+                    <p><strong>Vielen Dank für dein Verständnis!</strong></p>
+
+                    <p>Dein Lsw-Team</p>
+                </center>
+            </div>
+        </main>
+</body>
