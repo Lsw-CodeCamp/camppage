@@ -2,6 +2,12 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
+.card-shadow-telegram {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    min-height: 100px;
+    height: 100px;
+}
+
 .description {
     color: rgba(255,255,255,0.87);
     margin-bottom: 5%;
@@ -17,7 +23,7 @@
     width:50px;
     height:50px;
     border-radius:50%;
-    background: #fff;
+    background: #000;
     padding-left: 0px;
     float:left;
     display: inline-block;
@@ -42,6 +48,14 @@ ul#menu li {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 64px;
+}
+
+.telegram {
+    color: rgba(255,255,255,0.87);
+}
+
+.telegram h4 {
+    padding-left: 3%;
 }
 
 .camp-secure {
@@ -225,6 +239,20 @@ ul#menu li {
     color:#BDBDBD;
     text-decoration: none;
     padding-left: 1%;
+}
+
+.camp-code-telegram {
+    background: url('../assets/CodeCamp_Button.png') center center no-repeat #30272d;
+    color: #fff;
+    z-index: 10;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-code-telegram a, a:visited, a:hover, a:active {
+    color:#fff;
+    text-decoration: none;
+    padding-left: 5%;
 }
 
 .camp-code {
