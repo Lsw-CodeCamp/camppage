@@ -58,7 +58,7 @@
 					    <ol>
                             <li class="fragment">Was ist Git?</li>
                             <li class="fragment">Git benutzen</li>
-                            <li class="fragment">Git Tools</li>
+                            <li class="fragment">Nützliches</li>
                             <li class="fragment">Github</li>
                             <li class="fragment">Zusammenfassung</li>
                             <li class="fragment">Fragen</li>
@@ -84,6 +84,7 @@
 							<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
 						</a>
 					</section>
+
                     <section>
                         <img src="./git/git2.jpg" style="background: rgba(0,0,0,0); border: none ;width: 80%; height:80%;"></img>
                         <br/>
@@ -91,6 +92,7 @@
 							<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
 						</a>
 					</section>
+				</section>
                 <section>
                     <section>
                         <h1>Definitionen</h1>
@@ -204,7 +206,7 @@
                 </section>
                 <section>
                     <section>
-                        <h1>Git Tools</h1>
+                        <h1>Nützliches</h1>
                     </section>
 
                     <section>
@@ -243,6 +245,51 @@
 							</code></pre>
 						</span>
                     </section>
+
+					<section>
+						<h2>Commit Messages</h2>
+						<p>
+						    <ol>
+	                            <li class="fragment">Nicht mehr als 50 Zeichen</li>
+	                            <li class="fragment">Sich Zeit nehmen (kein <code>git commit -m</code>)</li>
+	                            <li class="fragment">Sich folgende Fragen stellen:</li>
+									<ul>
+										<li class="fragment">Warum ist die Änderung notwendig?</li>
+										<li class="fragment">Wie löst die Änderung das Problem?</li>
+										<li class="fragment">Welche Seiteneffekte hat die Änderung?</li>
+									</ul>
+	                            <li class="fragment">Falls vorhanden Link zum Problem einfügen</li>
+	                        </ol>
+	                    </p>
+						<i class="fragment" style="font-size: 15px;">
+							Quelle:
+							<a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">
+								https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
+							</a>
+						</i>
+					</section>
+
+					<section>
+						<h2>Beispiel: Commit Message</h2>
+						<pre><code data-trim contenteditable>
+							Redirect user to the requested page after login
+
+https://trello.com/path/to/relevant/card
+
+Users were being redirected to the home page after login, which is less
+useful than redirecting to the page they had originally requested before
+being redirected to the login form.
+
+* Store requested path in a session variable
+* Redirect to the stored location after successfully logging in the user
+						</code></pre>
+						<i class="fragment" style="font-size: 15px;">
+							Quelle:
+							<a href="https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message">
+								https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message
+							</a>
+						</i>
+					</section>
 
                     <section>
                         <h2>tig, gitk & gitg</h2>
@@ -286,10 +333,15 @@
                         </p>
                     </section>
 
-                    <!--<section>
-                        <img src="./git/git_data_transport.png" style="background: rgba(0,0,0,0); border: none ;width: 90%; height:90%;"></img>
-                        <br/><i style="font-size: 15px;">Quelle: <a href="http://www.patrickzahnd.ch/wp-content/uploads/2014/02/git-transport-v1-1024x723.png">http://www.patrickzahnd.ch/wp-content/uploads/2014/02/git-transport-v1-1024x723.png</a></i>
-                    </section>-->
+                    <section>
+						<img src="http://www.patrickzahnd.ch/wp-content/uploads/2014/02/git-transport-v1-1024x723.png" style="background: rgba(0,0,0,0); border: none ;width: 90%; height:90%;"></img>
+                        <br/>
+						<i style="font-size: 15px;">Quelle:
+							<a href="http://www.patrickzahnd.ch/wp-content/uploads/2014/02/git-transport-v1-1024x723.png">
+								http://www.patrickzahnd.ch/wp-content/uploads/2014/02/git-transport-v1-1024x723.png
+							</a>
+						</i>
+                    </section>
 
                     <section>
                         <h2>Tools</h2>
@@ -306,7 +358,7 @@
                     <section>
                         <h2>Github</h2>
                         <p>
-                            Tool um noch komfortabler gemeinsam an Projekten zu arbeiten.
+                            Ermöglicht es euch noch komfortabler gemeinsam an Projekten zu arbeiten.
                         </p>
                     </section>
                 </section>
