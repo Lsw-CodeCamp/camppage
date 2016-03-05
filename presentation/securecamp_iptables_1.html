@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SecureCamp</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/benny.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+            <a href="../securecamp.html">
+            <div class="icon"></div>
+            </a>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="f_secure.png" style="z-index: 200;">
+				</section>
+
+				<section>
+					<h1>iptables 1</h1>
+				</section>
+    
+                <section>
+                    <section>
+                        <h2>iptables packet flow</h2>
+                    </section>
+                    <section>
+                        <img src="./iptables/packetflow.png" style="border:none !important;"></img>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Grundbefehle</h2>
+                    </section>
+                    <section>
+                        <h3>Anzeige</h3>
+                        <pre><code class="hl sh" data-trim contenteditable>
+iptables -L ${CHAINNAME} # Zeigt die Chain in einer Liste an
+iptables -L -vn # Zeigt alles an im Detail und ohne Namensauflösung.
+                # Egal bei welchem _L Befehl sollte immer ein -n am 
+                # ende sein da sonst eine Namensauflösung versucht 
+                # wird und das kann dann dauern.
+iptables -L -vn --line-number # Zeigt alles                        
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Chains</h3>
+                        <pre><code class="hl sh" data-trim contenteditable>
+iptables -N ${CHAINNAME} # Erstellt eine neue CUSTOM CHAIN
+iptables -D ${REGEL/ZEILENNUMMER} # Löscht eine Regel oder 
+                                  # Zeilennummer
+iptables -F ${CHAINNAME} # Leert eine CHAIN
+ptables -Z ${CHAINNAME} # Löscht eine CUSTOMCHAIN geht nicht 
+                        # mit den Standard Chains INPUT, 
+                        # FORWARD und OUTPUT
+iptables -I ${CHAINNAME} # Fügt eine neue Regel in die Chain am 
+                         # Anfang ein (INSERT)
+iptables -A ${CHAINNAME} # Fügt eine neue Regel am ende der Chain 
+                         # ein (APPEND)
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>Einfügen neuer Regeln via Konsole</h3>
+                        <pre><code class="hl sh" data-trim contenteditable>
+iptables -I # INSERT
+iptables -A # APPEND
+                        </code></pre>
+                    </section>
+                    <section>
+                        <h3>INSERT</h3>
+                        <p>
+                            Fügt die neue Regel an die OBERSTE Stelle ein, hat man schon Regeln in seine Iptables drin wird diese über alle
+                            anderen eingefügt, also aller erste Regel.
+                        </p>
+                    </section>
+                    <section>
+                        <h3>APPEND</h3>
+                        <p>
+                            Fügt die neue Regel an das ENDE ein, hat man schon Regeln definiert wird diese an das ENDE eingefügt und zum
+                            Schluss ausgeführt. Normal macht man einen -j DROP am Ende.
+                        </p>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Arbeitsweise von iptables I</h3>
+                        <ul>
+                            <li>Bei Iptables fängt alles bei der Chain INPUT an</li>
+                            <li>Iptables arbeitet immer von oben nach unten die Liste durch</li>
+                            <li>Solange keine Regel definiert ist macht Iptables nichts.</li>
+                            <li>Sobald eine Regel definiert ist arbeitet Iptables danach egal ob etwas erlaubt oder geblockt
+                            wird</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>Arbeitsweise von iptables II</h3>
+                        <ul>
+                            <li>Iptables kennt daher nur 0 und 1</li>
+                            <li>Man muss nicht alles erlauben und/oder verbieten. Man erlaubt und der Rest wird gedropt</li>
+                            <li>Solange man es nicht benötigt wird nur mit der Chain INPUT gearbeitet, alles andere sind
+                            nur Standard Einstellungen</li>
+                            <li>Iptables ist eins der Mächtigsten Programme die ich kenne !!!</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3>Code-Form</h3>
+                    </section>
+
+                    <section>
+                        <pre><code class="hl sh" data-trim contenteditable>
+*filter
+:INPUT DROP [0:0]
+:FORWARD DROP [0:0]
+:OUTPUT DROP [0:0]
+-A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK,SYN -j REJECT --reject-with tcp-reset
+-A INPUT -m state --state INVALID -j DROP
+-A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A FORWARD -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK,SYN -j REJECT --reject-with tcp-reset
+-A FORWARD -m state --state INVALID -j DROP
+-A FORWARD -j DROP
+-A OUTPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A OUTPUT -p tcp -m tcp ! --tcp-flags FIN,SYN,RST,ACK,SYN -j REJECT --reject-with tcp-reset
+-A OUTPUT -m state --state INVALID -j DROP
+-A OUTPUT -j ACCEPT
+COMMIT
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h4>Grundkonfiguration iptables</h4>
+                        <ul>
+                            <li>Definition der Chains INPUT, FORWARD, OUTPUT</li>
+                            <li>Regel für INPUT, FORWARD, OUTPUT</li>
+                            <li>Prüfung des Status und der Richtigkeit der TCP-Pakete</li>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <h3>Links</h3>
+                    <p>
+                        <a href="https://linux-statt-windows.org/topic/1580/iptables-grundlagen-2-auflage">https://linux-statt-windows.org/topic/1580/iptables-grundlagen-2-auflage</a>
+                        <a href="http://linux.die.net/man/8/iptables">http://linux.die.net/man/8/iptables</a>
+                    </p>
+                </section>
+                <section>
+                    <h1>Q&A</h1>
+                </section>
+                <section>
+                    <h1>This is the end</h1>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -17,9 +17,21 @@ section.has-light-background, section.has-light-background h1, section.has-light
 .icon {
     z-index: 100;
     width: 150px;
-    height: 100px;
+    height: 150px;
+
+.icon {
+    z-index: 100;
+    width: 150px;
+    height: 150px;
     display: inline-block;
-    background-image: url(../../logo.png);
+    background-image: url(../../SecureCamp.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+}
+    display: inline-block;
+    background-image: url(../../SecureCamp.png);
     background-size: cover;
     position: fixed;
     bottom: 10px;
