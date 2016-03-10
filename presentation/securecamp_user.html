@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SecureCamp</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/benny.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+            <a href="../securecamp.html">
+            <div class="icon"></div>
+            </a>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="f_secure.png" style="z-index: 200;">
+				</section>
+
+				<section>
+					<h2>Sicherheitslücke User</h2>
+				</section>
+    
+                <section>
+                    <h3>Sicherheit fängt im Kopf an</h3>
+                    <ul>
+                        <li>Was installiere ich und wo bekomme ich es her?</li>
+                        <li>Wie gehe ich mit E-Mail um?</li>
+                        <li>Welche Rechte gebe ich anderen Usern?</li>
+                        <li>Wie geht das richtig, mit den Passwörtern?</li>
+                        <li>Wie nutze ich fremde Netzzugänge sicher?</li>
+                        <li>Wie benutze ich fremde Rechner sicher?</li>
+                        <li>Was gibt es sonst noch zu beachten?</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <table>
+                        <tr>
+                            <td>Sicher</td>
+                            <td>Unsicher</td>
+                        </tr>
+                        <tr>
+                            <td>Repository der Distro</td>
+                            <td>Alle anderen Quellen<br />Zumindest potenziell.</td>
+                        </tr>
+                        <tr>
+                            <td>PPA/Seite des Projekts/Hersteller</td>
+                            <td>Immer abwägen!<br 7>(Ich lade von heise.de aber nicht mehr von chip.de)
+                        </tr>
+                        <tr>
+                            <td>Originale App-Stores</td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section>
+                    <h3>Gefahrenquelle E-Mail</h3>
+                    <ul>
+                        <li>Im Mail-Client die  autom. Anzeige deaktivieren</li>
+                        <li>Unbekannte Absender + Anhang = ACHTUNG!</li>
+                        <li>Links nicht folgen, Seite selbst ansurfen</li>
+                        <li>Anwälte u.ä. SChreiben per Post</li>
+                        <li>Der Spam-Filter ist dein Freund</lI>
+                        <li>Ist die Damie hübsch, ist es Spam ;)</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Manche Webseiten sind gefährlich</h3>
+                    <ul>
+                        <li>Filter gegen schädliche Seiten sind sinnvoll</li>
+                        <li>Kein autom. Download v. Codecs u.ä. !</li>
+                        <li>Niemals etwas downloaden und installieren, um etwas downloaden zu können!</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Userrechte. oft zu beachten</h3>
+                    <ul>
+                        <li>Brauchen die anderen User Sudo-Rechte?</li>
+                        <li>Sollen sie fremde Datenträger einhängen können?</li>
+                    </ul>
+                    <p>
+                        Bitte aufrufen: <br />
+                        <a href="https://wiki.ubuntuusers.de/Benutzer_und_Gruppen/">https://wiki.ubuntuusers.de/Benutzer_und_Gruppen/</a>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Passwörter, soooo wichtig</h2>
+                    <ul>
+                        <li>Mindestens 12 Zeichen lang</li>
+                        <li>Groß- und Kleinbuchstaben, Zahlen, Sonderzeichen</li>
+                        <li>Für jede Seite  und jedes Gerät ein eigenes</lI>
+                        <li>Am Router ein eigenes Wlan-Passwort</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Passwörter merken</h3>
+                    <ul>
+                        <li>Zitat-Erstbuchstaben-Leet; <br /><br />
+                            Aus "„Hinter eines Baumes Rinde, lebt die Made mit dem Kinde.“ wird „H38R,ldMmdK.“
+                        </li>
+                        <li>
+                            Standardpasswort mit seitenspezifischer Erweiterung: (Beispiel Facebook)<br /><br />
+                            Meine erste Lehrerin, mein Einschulungsjahr und etwas zu FB = „FrFink1978FresseB“
+                        </li>
+                        <li>Passwortmanager mit Generator z.B. Enpass</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Fremde Internetzugänge</h3>
+                    <p>Keine Gelegenheit zum Mitlesen bieten</p>
+                    <ul>
+                        <li>Am Netzwerk anmelden</li>
+                        <li>Tunnel aktivieren:
+                            <ul>
+                                <li>Minimum: HTTPS-Everywhere</li>
+                                <li>Tor</li>
+                                <li>VPN</li>
+                            </ul>
+                        </li>
+                        <li>Jetzt erst surfen</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Fremde Rechner sicher benutzen</h3>
+                    <p>
+                        Wer sicher gehen will, dass er auf einem fremden Rechner keine Spuren hinterlässt(Passwörter u.v.m.), hat immer einen USB-Stick mit einem Live-System dabei, von dem er bootet  und mit dem er arbeitet.
+                    </p>
+                    <ul>
+                        <li>32 GB, oder mehr</li>
+                        <li>Nichtflüchtiger Speicher bei Installation einrichten</li>
+                        <li>Noch besser: Verschlüsselte Datenpartition</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Und sonst so?</h3>
+                    <ul>
+                        <li>Gastzugang am Router einrichten</li>
+                        <li>Home-Ordner verschlüsseln(bei mehreren Nutzern)</li>
+                        <li>Mobilgeräte komplett verschlüsseln</li>
+                        <li>Bildschirmsperre mit Passwort</li>
+                        <li>Sudo-Passwort nur eingeben, wenn die Aufforderung nicht unerwartet kommt</li>
+                        <li>Updates, Updates, Updates</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Gute Nacht</h1>
+                </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
