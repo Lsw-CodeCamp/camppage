@@ -48,6 +48,7 @@ ul#menu li {
     margin-left: 15%;
     margin-right: 15%;
     margin-top: 64px;
+    padding-top: 0% !important;
 }
 
 .telegram {
@@ -56,6 +57,26 @@ ul#menu li {
 
 .telegram h4 {
     padding-left: 3%;
+}
+
+.camp-tube {
+    background: url('./../assets/ComingSoon_Button.png') center center no-repeat rgba(0,0,0,0.1);
+    color: #fff;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-talk {
+    background: url('') center center no-repeat rgba(0,0,0,0.1);
+    color: #fff;
+    min-height:50px;
+    height: 150px;
+}
+
+.camp-talk a, a:visited, a:hover, a:active {
+    color:#555;
+    text-decoration: none;
+    padding-left: 5%;
 }
 
 .camp-secure {
@@ -89,14 +110,8 @@ ul#menu li {
 }
 
 .session-secure {
-    background-color: #a5a3ae;
+    background-color: #a5a3ae!important;
     color: #fff;
-}
-
-.session-secure a, a:visited, a:hover, a:active {
-    color:#fff;
-    text-decoration: none;
-    padding-left: 5%;
 }
 
 .session-secure-header {
@@ -292,15 +307,54 @@ ul#menu li {
     text-align: center;
 }
 
+.soundcloud-title {
+    font-size: 25px;
+}
+
 .session {
     background-color: #97272d;
     color: #fff;
 }
 
-.session a, a:visited, a:hover, a:active {
+.session-link, .session-link:visited, .session-link:hover, .session-link:active {
     color:#fff;
     text-decoration: none;
     padding-left: 5%;
+    height: 100%!important;
+    width: 100%!important;
+    padding: 100%;
+    overflow: hidden;
+}
+
+.clickable {
+    width: 100%;
+    height: 100%;
+}
+
+.soundcloud-header {
+    /*background: #251e23;*/
+    background: rgba(37, 30, 35, 0); 
+    color: #fff;
+    font-size: 20px;
+    padding-left: 1%;
+}
+
+.soundcloud-header a {
+    color:#555;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.soundcloud-header a:hover {
+    color:#555;
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+.session-header a {
+    color:#BDBDBD;
+    text-decoration: none;
+    padding-left: 1%;
 }
 
 .session-header {
@@ -327,6 +381,15 @@ ul#menu li {
     padding: 0px;
 	color: #BDBDBD !important;
     text-decoration: none;
+}
+
+.card-hover:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)!important;
+}
+
+.session h3 {
+    padding-left: 5%;
+    margin: 0px;
 }
 
 .mdl-mini-footer {

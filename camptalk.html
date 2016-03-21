@@ -1,0 +1,178 @@
+<!doctype html>
+<header>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style/material.min.css">
+    <script src="./style/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style/style.css">
+
+    <title>CampTalk</title>
+    <script>
+        function load(el) { el.classList.add('loaded') }
+        function unload(el) { el.classList.add('unloaded') }
+    </script>
+    
+    <style>
+        body {
+            background: rgba(0,0,0,0.1);
+        }
+    
+        .loaded { background: #251e23; }
+        
+        .unloaded { background: #303030; }
+  
+        .link, .link:hover { color:#757575 !important;padding-left:0px;} 
+
+        .card-link, .card-link:hover {padding:0px;}
+    .nav {
+        color: #555 !important;
+    }
+
+    .mdl-layout__drawer-button {
+        color: #555 !important;
+    }
+    
+    .meta {
+        background: #fff;
+    }
+
+    a, a:hover , a:focus{
+        padding: 0px;
+    }
+
+    .mdl-logo {
+        color: #555 !important;
+        font-weight: bold;
+    }
+
+    .footer-link {
+        color: #555 !important;
+    }
+    </style>
+
+</header>
+
+<body>
+    <!-- MENU -->
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+    .demo-layout-transparent {
+        background: rgba(255, 255, 255, 0);
+    }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        /* This background is dark, so we set text to white. Use 87% black instead if
+           your background is light. */
+        color: white;
+    }
+    </style>
+
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <header class="mdl-layout__header mdl-layout__header--transparent">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title nav">CampTalk</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation -->
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link nav" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link nav" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link nav" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link nav" href="#">CampTalk</a>
+                    <a class="mdl-navigation__link nav" href="./about.html">Über</a>
+                </nav>
+            </div>
+        </header>
+            <div class="mdl-layout__drawer" style="color:  #555!important">
+                <span class="mdl-layout-title nav">CampTalk</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link nav" href="./index.html">Übersicht</a>
+                    <a class="mdl-navigation__link nav" href="./codecamp.html">CodeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./creativecamp.html">CreativeCamp</a>
+                    <a class="mdl-navigation__link nav" href="./securecamp.html">SecureCamp</a>
+                    <a class="mdl-navigation__link nav" href="./techcamp.html">TechCamp</a>
+                    <a class="mdl-navigation__link nav" href="#">CampTalk</a>
+                    <a class="mdl-navigation__link nav" href="./about.html">Über</a>
+                </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="content">
+                <div class="description">
+                    <h3 class="nav">ÜBER</h3>
+                </div>
+                <div class="mdl-grid">
+                <!-- define cards here -->
+                <div class="mdl-card mdl-cell mdl-cell--12-col session-header-card">
+                    <div class="mdl-card__media mdl-color-text--grey-50 soundcloud-header">
+                        <h3><a href="#">TALK 1</a></h3>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-cell mdl-cell--9-col card-hover card-soundcloud" style="height: 300px!important;">
+                    <div class="mdl-card__media mdl-color-text--grey-50 session" style="background-color: #fff">
+                            <div class="clickable">
+                        <iframe width="100%" height="250" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A%2F%2Fsoundcloud.com%2Flinux-statt-windows%2Fcamptalk-1%3Futm_source%3Dsoundcloud%26utm_campaign%3Dshare%26utm_medium%3Dfacebook&amp;auto_play=false&amp;show_artwork=true&amp;color=0066cc" style="border: none;"></iframe>
+                            </div>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600" style="padding: 7px; marging: 0px;">
+                        <a href="" class="link">Zum Foren-Beitrag</a>
+                    </div>
+                </div>
+                
+                <!--<div class="mdl-card mdl-cell mdl-cell--><!--12-col session-header-card">
+                <div class="mdl-card__media mdl-color-text--><!--grey-50 session-header">
+                        <h3><a href="#">VORLAGEN</a></h3>
+                    </div>
+                </div>
+
+                <div class="mdl-card mdl-cell mdl-cell--><!--4-col">
+                    <div class="mdl-card__media mdl-color-text--><!--grey-50 session">
+                        <h3><a href="presentation/benny_co_vorlage.html">Vorlage 1</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--><!--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Vorlage 1</strong>
+                            <span>Ab 03.03.2016 verfügbar<br /><br />
+                                <a href="#" class="link">Download als PDF</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mdl-card mdl-cell mdl-cell--><!--4-col">
+                    <div class="mdl-card__media mdl-color-text--><!--grey-50 session">
+                        <h3><a href="presentation/codecamp_vorlage.html">Vorlage 2</a></h3>
+                    </div>
+                    <div class="mdl-card__supporting-text meta mdl-color-text--><!--grey-600">
+                        <div class="minilogo"></div>
+                        <div>
+                            <strong>Vorlage 2</strong>
+                            <span>Ab 03.03.2016 verfügbar<br /><br />
+                                <a href="#" class="link">Download als PDF</a>
+                            </span>
+                        </div>
+                    </div>
+                    </div>-->
+
+            </div>
+            </div>
+
+        <footer class="mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+				<div class="mdl-logo">LsW-Camps</div>
+    				<ul class="mdl-mini-footer__link-list">
+      					<li><a href="http://linux-statt-windows.org" class="footer-link">Forum</a></li>
+      					<li><a href="https://www.facebook.com/groups/LinuxstattWindows/" class="footer-link">Facebook</a></li>
+    				</ul>
+			</div>
+			<div class="mdl-mini-footer--right-section">
+                <div class="mdl-logo">© 2016 Linux statt Windows</div> 
+            </div>
+        </footer> 
+            
+        </main>
+</body>
