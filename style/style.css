@@ -67,7 +67,7 @@ ul#menu li {
 }
 
 .camp-talk {
-    background: url('') center center no-repeat rgba(0,0,0,0.1);
+    background: url('./../assets/CampTalk_Button.png') center center no-repeat #fa9549;
     color: #fff;
     min-height:50px;
     height: 150px;
