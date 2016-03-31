@@ -165,14 +165,8 @@ ul#menu li {
 }
 
 .session-tech {
-    background-color: #006837;
+    background-color: #006837 !important;
     color: #fff;
-}
-
-.session-tech a, a:visited, a:hover, a:active {
-    color:#fff;
-    text-decoration: none;
-    padding-left: 5%;
 }
 
 .session-tech-header {
